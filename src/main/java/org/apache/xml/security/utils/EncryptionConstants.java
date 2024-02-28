@@ -129,19 +129,22 @@ public final class EncryptionConstants {
 
     /** Field ENCRYPTIONSPECIFICATION_URL */
     public static final String ENCRYPTIONSPECIFICATION_URL =
-        "http://www.w3.org/TR/2001/WD-xmlenc-core-20010626/";
+            "http://www.w3.org/TR/2001/WD-xmlenc-core-20010626/";
 
     /** The namespace of the
      * <A HREF="http://www.w3.org/TR/2001/WD-xmlenc-core-20010626/">
      * XML Encryption Syntax and Processing</A> */
     public static final String EncryptionSpecNS =
-        "http://www.w3.org/2001/04/xmlenc#";
+            "http://www.w3.org/2001/04/xmlenc#";
 
     /**
      * The namespace of the XML Encryption 1.1 specification
      */
     public static final String EncryptionSpec11NS =
-        "http://www.w3.org/2009/xmlenc11#";
+            "http://www.w3.org/2009/xmlenc11#";
+
+    public static final String EncryptionSpecPQC = "http://www.w3.org/2023/02/xmlenc-pqc#";
+
 
     /** URI for content*/
     public static final String TYPE_CONTENT = EncryptionSpecNS + "Content";
@@ -151,67 +154,79 @@ public final class EncryptionConstants {
 
     /** URI for mediatype*/
     public static final String TYPE_MEDIATYPE =
-        "http://www.isi.edu/in-notes/iana/assignments/media-types/";
+            "http://www.isi.edu/in-notes/iana/assignments/media-types/";
 
     /** Block Encryption - REQUIRED TRIPLEDES */
     public static final String ALGO_ID_BLOCKCIPHER_TRIPLEDES =
-        EncryptionConstants.EncryptionSpecNS + "tripledes-cbc";
+            EncryptionConstants.EncryptionSpecNS + "tripledes-cbc";
 
     /** Block Encryption - REQUIRED AES-128 */
     public static final String ALGO_ID_BLOCKCIPHER_AES128 =
-        EncryptionConstants.EncryptionSpecNS + "aes128-cbc";
+            EncryptionConstants.EncryptionSpecNS + "aes128-cbc";
 
     /** Block Encryption - REQUIRED AES-256 */
     public static final String ALGO_ID_BLOCKCIPHER_AES256 =
-        EncryptionConstants.EncryptionSpecNS + "aes256-cbc";
+            EncryptionConstants.EncryptionSpecNS + "aes256-cbc";
 
     /** Block Encryption - OPTIONAL AES-192 */
     public static final String ALGO_ID_BLOCKCIPHER_AES192 =
-        EncryptionConstants.EncryptionSpecNS + "aes192-cbc";
+            EncryptionConstants.EncryptionSpecNS + "aes192-cbc";
 
     /** Block Encryption - OPTIONAL AES-128-GCM */
     public static final String ALGO_ID_BLOCKCIPHER_AES128_GCM =
-        "http://www.w3.org/2009/xmlenc11#aes128-gcm";
+            "http://www.w3.org/2009/xmlenc11#aes128-gcm";
 
     /** Block Encryption - OPTIONAL AES-192-GCM */
     public static final String ALGO_ID_BLOCKCIPHER_AES192_GCM =
-        "http://www.w3.org/2009/xmlenc11#aes192-gcm";
+            "http://www.w3.org/2009/xmlenc11#aes192-gcm";
 
     /** Block Encryption - OPTIONAL AES-256-GCM */
     public static final String ALGO_ID_BLOCKCIPHER_AES256_GCM =
-        "http://www.w3.org/2009/xmlenc11#aes256-gcm";
+            "http://www.w3.org/2009/xmlenc11#aes256-gcm";
 
     /** Block Encryption - OPTIONAL SEED-128 */
     public static final String ALGO_ID_BLOCKCIPHER_SEED128 =
-        "http://www.w3.org/2007/05/xmldsig-more#seed128-cbc";
+            "http://www.w3.org/2007/05/xmldsig-more#seed128-cbc";
 
     /** Block Encryption - OPTIONAL CAMELLIA-128 */
     public static final String ALGO_ID_BLOCKCIPHER_CAMELLIA128 =
-        "http://www.w3.org/2001/04/xmldsig-more#camellia128-cbc";
+            "http://www.w3.org/2001/04/xmldsig-more#camellia128-cbc";
 
     /** Block Encryption - OPTIONAL CAMELLIA-128 */
     public static final String ALGO_ID_BLOCKCIPHER_CAMELLIA192 =
-        "http://www.w3.org/2001/04/xmldsig-more#camellia192-cbc";
+            "http://www.w3.org/2001/04/xmldsig-more#camellia192-cbc";
 
     /** Block Encryption - OPTIONAL CAMELLIA-128 */
     public static final String ALGO_ID_BLOCKCIPHER_CAMELLIA256 =
-        "http://www.w3.org/2001/04/xmldsig-more#camellia256-cbc";
+            "http://www.w3.org/2001/04/xmldsig-more#camellia256-cbc";
 
     /** Key Transport - REQUIRED RSA-v1.5*/
     public static final String ALGO_ID_KEYTRANSPORT_RSA15 =
-        EncryptionConstants.EncryptionSpecNS + "rsa-1_5";
+            EncryptionConstants.EncryptionSpecNS + "rsa-1_5";
 
     /** Key Transport - REQUIRED RSA-OAEP */
     public static final String ALGO_ID_KEYTRANSPORT_RSAOAEP =
-        EncryptionConstants.EncryptionSpecNS + "rsa-oaep-mgf1p";
+            EncryptionConstants.EncryptionSpecNS + "rsa-oaep-mgf1p";
 
     /** Key Transport - OPTIONAL RSA-OAEP_11 */
     public static final String ALGO_ID_KEYTRANSPORT_RSAOAEP_11 =
-        EncryptionConstants.EncryptionSpec11NS + "rsa-oaep";
+            EncryptionConstants.EncryptionSpec11NS + "rsa-oaep";
+
+    public static final String ALGO_ID_KEM_KYBER =
+            EncryptionConstants.EncryptionSpecPQC + "kyber";
+
+    public static final String ALGO_ID_KEM_CMCE =
+            EncryptionConstants.EncryptionSpecPQC + "cmce";
+
+    public static final String ALGO_ID_KEM_BIKE =
+            EncryptionConstants.EncryptionSpecPQC + "bike";
+
+    public static final String ALGO_ID_KEM_HQC =
+            EncryptionConstants.EncryptionSpecPQC + "hqc";
 
     /** Key Agreement - OPTIONAL Diffie-Hellman */
     public static final String ALGO_ID_KEYAGREEMENT_DH =
-        EncryptionConstants.EncryptionSpecNS + "dh";
+            EncryptionConstants.EncryptionSpecNS + "dh";
 
     /** Key Agreement Diffie-Hellman for EC (and X) keys with the originator ephemeral and receiver static key */
     public static final String ALGO_ID_KEYAGREEMENT_ECDH_ES =
@@ -219,71 +234,71 @@ public final class EncryptionConstants {
 
     /** Symmetric Key Wrap - REQUIRED TRIPLEDES KeyWrap */
     public static final String ALGO_ID_KEYWRAP_TRIPLEDES =
-        EncryptionConstants.EncryptionSpecNS + "kw-tripledes";
+            EncryptionConstants.EncryptionSpecNS + "kw-tripledes";
 
     /** Symmetric Key Wrap - REQUIRED AES-128 KeyWrap */
     public static final String ALGO_ID_KEYWRAP_AES128 =
-        EncryptionConstants.EncryptionSpecNS + "kw-aes128";
+            EncryptionConstants.EncryptionSpecNS + "kw-aes128";
 
     /** Symmetric Key Wrap - REQUIRED AES-256 KeyWrap */
     public static final String ALGO_ID_KEYWRAP_AES256 =
-        EncryptionConstants.EncryptionSpecNS + "kw-aes256";
+            EncryptionConstants.EncryptionSpecNS + "kw-aes256";
 
     /** Symmetric Key Wrap - OPTIONAL AES-192 KeyWrap */
     public static final String ALGO_ID_KEYWRAP_AES192 =
-        EncryptionConstants.EncryptionSpecNS + "kw-aes192";
+            EncryptionConstants.EncryptionSpecNS + "kw-aes192";
 
     /** Symmetric Key Wrap - OPTIONAL CAMELLIA-128 KeyWrap */
     public static final String ALGO_ID_KEYWRAP_CAMELLIA128 =
-        "http://www.w3.org/2001/04/xmldsig-more#kw-camellia128";
+            "http://www.w3.org/2001/04/xmldsig-more#kw-camellia128";
 
     /** Symmetric Key Wrap - OPTIONAL CAMELLIA-192 KeyWrap */
     public static final String ALGO_ID_KEYWRAP_CAMELLIA192 =
-        "http://www.w3.org/2001/04/xmldsig-more#kw-camellia192";
+            "http://www.w3.org/2001/04/xmldsig-more#kw-camellia192";
 
     /** Symmetric Key Wrap - OPTIONAL CAMELLIA-256 KeyWrap */
     public static final String ALGO_ID_KEYWRAP_CAMELLIA256 =
-        "http://www.w3.org/2001/04/xmldsig-more#kw-camellia256";
+            "http://www.w3.org/2001/04/xmldsig-more#kw-camellia256";
 
     /** Symmetric Key Wrap - OPTIONAL SEED-128 KeyWrap */
     public static final String ALGO_ID_KEYWRAP_SEED128 =
-        "http://www.w3.org/2007/05/xmldsig-more#kw-seed128";
+            "http://www.w3.org/2007/05/xmldsig-more#kw-seed128";
 
     /** Message Authentication - RECOMMENDED XML Digital Signature */
     public static final String ALGO_ID_AUTHENTICATION_XMLSIGNATURE =
-        "http://www.w3.org/TR/2001/CR-xmldsig-core-20010419/";
+            "http://www.w3.org/TR/2001/CR-xmldsig-core-20010419/";
 
     /** Canonicalization - OPTIONAL Canonical XML with Comments */
     public static final String ALGO_ID_C14N_WITHCOMMENTS =
-        "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments";
+            "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments";
 
     /** Canonicalization - OPTIONAL Canonical XML (omits comments) */
     public static final String ALGO_ID_C14N_OMITCOMMENTS =
-        "http://www.w3.org/TR/2001/REC-xml-c14n-20010315";
+            "http://www.w3.org/TR/2001/REC-xml-c14n-20010315";
 
     /** Encoding - REQUIRED base64 */
     public static final String ALGO_ID_ENCODING_BASE64 =
-        "http://www.w3.org/2000/09/xmldsig#base64";
+            "http://www.w3.org/2000/09/xmldsig#base64";
 
     /** MGF1 with SHA-1 */
     public static final String MGF1_SHA1 =
-        EncryptionConstants.EncryptionSpec11NS + "mgf1sha1";
+            EncryptionConstants.EncryptionSpec11NS + "mgf1sha1";
 
     /** MGF1 with SHA-224 */
     public static final String MGF1_SHA224 =
-        EncryptionConstants.EncryptionSpec11NS + "mgf1sha224";
+            EncryptionConstants.EncryptionSpec11NS + "mgf1sha224";
 
     /** MGF1 with SHA-256 */
     public static final String MGF1_SHA256 =
-        EncryptionConstants.EncryptionSpec11NS + "mgf1sha256";
+            EncryptionConstants.EncryptionSpec11NS + "mgf1sha256";
 
     /** MGF1 with SHA-384 */
     public static final String MGF1_SHA384 =
-        EncryptionConstants.EncryptionSpec11NS + "mgf1sha384";
+            EncryptionConstants.EncryptionSpec11NS + "mgf1sha384";
 
     /** MGF1 with SHA-512 */
     public static final String MGF1_SHA512 =
-        EncryptionConstants.EncryptionSpec11NS + "mgf1sha512";
+            EncryptionConstants.EncryptionSpec11NS + "mgf1sha512";
 
     /** Key derivation function ConcatKDF */
     public static final String ALGO_ID_KEYDERIVATION_CONCATKDF =

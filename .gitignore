@@ -13,3 +13,5 @@
 .pmd
 .pmdruleset.xml
 /.settings/
+
+.DS_Store

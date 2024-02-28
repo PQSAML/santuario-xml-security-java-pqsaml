@@ -36,18 +36,18 @@ public final class Constants {
 
     /** Field exceptionMessagesResourceBundleDir */
     public static final String exceptionMessagesResourceBundleDir =
-        "org/apache/xml/security/resource";
+            "org/apache/xml/security/resource";
 
     /** Field exceptionMessagesResourceBundleBase is the location of the <CODE>ResourceBundle</CODE> */
     public static final String exceptionMessagesResourceBundleBase =
-        exceptionMessagesResourceBundleDir + "/" + "xmlsecurity";
+            exceptionMessagesResourceBundleDir + "/" + "xmlsecurity";
 
     /**
      * The URL of the
      * <A HREF="http://www.w3.org/TR/2001/CR-xmldsig-core-20010419/">XML Signature specification</A>
      */
     public static final String SIGNATURESPECIFICATION_URL =
-        "http://www.w3.org/TR/2001/CR-xmldsig-core-20010419/";
+            "http://www.w3.org/TR/2001/CR-xmldsig-core-20010419/";
 
     /**
      * The namespace of the
@@ -66,6 +66,12 @@ public final class Constants {
 
     /** The (newer) URL for more algorithms **/
     public static final String XML_DSIG_NS_MORE_07_05 = "http://www.w3.org/2007/05/xmldsig-more#";
+
+    /** Post-quantum signature namespace */
+    public static final String XML_DSIG_PQC = "http://www.w3.org/2023/02/xmldsig-pqc#";
+
+    public static final String XML_DSIG_PQC_COMPOSITES = "http://www.w3.org/2023/02/xmldsig-pqc-composites#";
+
 
     /** The URI for XML spec*/
     public static final String XML_LANG_SPACE_SpecNS = "http://www.w3.org/XML/1998/namespace";
@@ -274,7 +280,7 @@ public final class Constants {
      *  draft-blake-wilson-xmldsig-ecdsa-02.txt</A>
      */
     public static final String ALGO_ID_SIGNATURE_ECDSA_CERTICOM =
-        "http://www.certicom.com/2000/11/xmlecdsig#ecdsa-sha1";
+            "http://www.certicom.com/2000/11/xmlecdsig#ecdsa-sha1";
 
     private Constants() {
         // we don't allow instantiation
